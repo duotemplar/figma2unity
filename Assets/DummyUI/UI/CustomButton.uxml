@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+             xmlns:engine="UnityEngine.UIElements" 
+             xmlns:editor="UnityEditor.UIElements"
+             xsi:noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd">
+    
+    <Style src="CustomButton.uss" />
+    
+    <engine:VisualElement name="custom-button-root" class="custom-button-root">
+        <!-- Button content will be dynamically added by CustomButtonElement -->
+    </engine:VisualElement>
+    
+</engine:UXML>
