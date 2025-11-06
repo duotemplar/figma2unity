@@ -1,3 +1,9 @@
 [submodule "Figma-Context-MCP"]
 	path = Figma-Context-MCP
 	url = https://github.com/GLips/Figma-Context-MCP.git
+[submodule "shadcn-ui"]
+	path = shadcn-ui
+	url = https://github.com/shadcn-ui/ui.git
+[submodule "radix-ui"]
+	path = radix-ui
+	url = https://github.com/radix-ui/themes.git
