@@ -66,6 +66,48 @@ namespace DummyUI
             {
                 uiDocument = gameObject.AddComponent<UIDocument>();
             }
+            
+            // Configure Panel Settings to prevent scaling issues
+            ConfigurePanelSettings();
+        }
+        
+        /// <summary>
+        /// Automatically configure Panel Settings for proper UI scaling
+        /// </summary>
+        private void ConfigurePanelSettings()
+        {
+            if (uiDocument.panelSettings == null)
+            {
+                Debug.LogWarning("[InspectorPanel] No Panel Settings assigned. Creating default settings...");
+                
+                // Try to find existing Panel Settings in Resources
+                var panelSettings = Resources.Load<PanelSettings>("UI/InspectorPanelSettings");
+                
+                if (panelSettings == null)
+                {
+                    // Create a temporary Panel Settings at runtime
+                    panelSettings = ScriptableObject.CreateInstance<PanelSettings>();
+                    panelSettings.name = "InspectorPanelSettings (Runtime)";
+                }
+                
+                uiDocument.panelSettings = panelSettings;
+            }
+            
+            // Configure the Panel Settings
+            var settings = uiDocument.panelSettings;
+            if (settings != null)
+            {
+                // Use Constant Pixel Size mode to avoid scaling issues
+                settings.scaleMode = PanelScaleMode.ConstantPixelSize;
+                
+                // Set appropriate scale
+                settings.scale = 1.0f;
+                
+                // Set reference resolution (optional, but recommended)
+                settings.referenceResolution = new Vector2Int(1920, 1080);
+                
+                Debug.Log($"[InspectorPanel] Panel Settings configured: Scale Mode = {settings.scaleMode}, Scale = {settings.scale}");
+            }
         }
         
         private void Start()

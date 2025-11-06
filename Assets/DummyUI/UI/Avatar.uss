@@ -1,0 +1,197 @@
+/* Avatar Component Styles */
+/* Based on shadcn/ui Avatar component */
+
+/* Base Avatar */
+.avatar {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.avatar-container {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+}
+
+/* Avatar Image */
+.avatar-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    -unity-background-scale-mode: scale-and-crop;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+/* Fallback Text */
+.avatar-fallback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    -unity-text-align: middle-center;
+    font-size: 16px;
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgb(100, 100, 100);
+    margin: 0;
+    padding: 0;
+}
+
+/* Shape Variants */
+.avatar-circle .avatar-container {
+    border-radius: 50%;
+}
+
+.avatar-circle .avatar-fallback {
+    border-radius: 50%;
+}
+
+.avatar-rounded .avatar-container {
+    border-radius: 8px;
+}
+
+.avatar-rounded .avatar-fallback {
+    border-radius: 8px;
+}
+
+/* Size Variants */
+.avatar-small .avatar-container {
+    width: 32px;
+    height: 32px;
+}
+
+.avatar-small .avatar-fallback {
+    font-size: 14px;
+}
+
+.avatar-medium .avatar-container {
+    width: 40px;
+    height: 40px;
+}
+
+.avatar-medium .avatar-fallback {
+    font-size: 16px;
+}
+
+.avatar-large .avatar-container {
+    width: 48px;
+    height: 48px;
+}
+
+.avatar-large .avatar-fallback {
+    font-size: 18px;
+}
+
+/* Grayscale Effect */
+.avatar-grayscale {
+    -unity-background-image-tint-color: rgb(128, 128, 128);
+}
+
+/* Ring Style (for stacked avatars) */
+.avatar-ring {
+    border-width: 2px;
+    border-color: rgb(255, 255, 255);
+}
+
+.avatar-ring .avatar-container {
+    border-width: 2px;
+    border-color: rgb(255, 255, 255);
+}
+
+/* Hover State */
+.avatar:hover {
+    opacity: 0.9;
+}
+
+/* Focus State */
+.avatar:focus {
+    outline-width: 2px;
+    outline-color: rgb(59, 130, 246);
+    outline-offset: 2px;
+}
+
+/* Avatar Group Container (for stacked avatars) */
+.avatar-group {
+    flex-direction: row;
+    align-items: center;
+}
+
+.avatar-group .avatar {
+    margin-left: -8px; /* Negative margin for overlap */
+}
+
+.avatar-group .avatar:first-child {
+    margin-left: 0; /* No margin for first avatar */
+}
+
+/* Stacked Avatar Styles */
+.avatar-stacked {
+    /* Additional styles for stacked display */
+}
+
+.avatar-stacked .avatar-container {
+    border-width: 2px;
+    border-color: rgb(255, 255, 255);
+}
+
+/* Color Variants for Fallback */
+.avatar-primary .avatar-fallback {
+    background-color: rgb(59, 130, 246); /* Blue */
+}
+
+.avatar-secondary .avatar-fallback {
+    background-color: rgb(156, 163, 175); /* Gray */
+}
+
+.avatar-success .avatar-fallback {
+    background-color: rgb(34, 197, 94); /* Green */
+}
+
+.avatar-danger .avatar-fallback {
+    background-color: rgb(239, 68, 68); /* Red */
+}
+
+.avatar-warning .avatar-fallback {
+    background-color: rgb(251, 146, 60); /* Orange */
+}
+
+/* Status Indicator (optional) */
+.avatar-status {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border-width: 2px;
+    border-color: rgb(255, 255, 255);
+}
+
+.avatar-status-online {
+    background-color: rgb(34, 197, 94); /* Green */
+}
+
+.avatar-status-offline {
+    background-color: rgb(156, 163, 175); /* Gray */
+}
+
+.avatar-status-busy {
+    background-color: rgb(239, 68, 68); /* Red */
+}
+
+.avatar-status-away {
+    background-color: rgb(251, 146, 60); /* Orange */
+}

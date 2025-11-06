@@ -5,6 +5,8 @@
 .inspector-root {
     background-color: rgb(45, 45, 45); /* Dark background */
     padding: 8px;
+    width: 320px; /* Fixed width to prevent scaling issues */
+    max-width: 320px;
     min-width: 300px;
     min-height: 600px;
     border-radius: 8px;
@@ -31,6 +33,7 @@
     font-size: 14px;
     -unity-font-style: bold;
     margin: 0;
+    height: 18px; /* Fixed height */
 }
 
 .settings-icon {
@@ -55,6 +58,7 @@
     color: rgb(200, 200, 200);
     font-size: 12px;
     margin: 0;
+    height: 16px; /* Fixed height */
 }
 
 .tag-value {
@@ -64,6 +68,7 @@
     padding: 2px 8px;
     border-radius: 3px;
     margin: 0;
+    height: 16px; /* Fixed height */
 }
 
 /* Foldout Sections */
@@ -88,6 +93,7 @@
     font-size: 13px;
     -unity-font-style: bold;
     margin: 0;
+    height: 18px; /* Fixed height */
 }
 
 .inspector-foldout > .unity-foldout__content {
@@ -121,7 +127,9 @@
     font-size: 12px;
     margin: 0;
     flex: 1;
+    width: 100px; /* Fixed width */
     max-width: 120px;
+    min-width: 80px;
     -unity-text-align: middle-left;
 }
 
@@ -129,13 +137,17 @@
 .vector3-container {
     flex-direction: row;
     flex: 1;
+    width: 150px; /* Fixed width */
     max-width: 180px;
+    min-width: 120px;
 }
 
 .vector3-input {
     flex: 1;
     margin: 0 2px;
+    width: 45px; /* Fixed width for each input */
     min-width: 30px;
+    max-width: 60px;
 }
 
 .vector3-input .unity-text-field__input {
@@ -145,7 +157,8 @@
     color: rgb(220, 220, 220);
     font-size: 11px;
     padding: 2px 4px;
-    text-align: center;
+    height: 18px; /* Fixed height */
+    -unity-text-align: middle-center;
 }
 
 .vector3-input .unity-text-field__input:focus {
@@ -156,6 +169,8 @@
 /* Toggle Styling */
 .inspector-toggle {
     flex: 0 0 auto;
+    width: 20px; /* Fixed width */
+    height: 20px; /* Fixed height */
 }
 
 .inspector-toggle .unity-toggle__input {
@@ -164,6 +179,7 @@
     border-radius: 3px;
     width: 16px;
     height: 16px;
+    margin: 2px;
 }
 
 .inspector-toggle .unity-toggle__input:checked {
@@ -181,12 +197,15 @@
     flex-direction: row;
     align-items: center;
     flex: 1;
+    width: 150px; /* Fixed width */
     max-width: 180px;
+    min-width: 120px;
 }
 
 .inspector-slider {
     flex: 1;
     margin-right: 8px;
+    height: 18px; /* Fixed height */
 }
 
 .inspector-slider .unity-slider__tracker {
@@ -212,7 +231,10 @@
     color: rgb(180, 180, 180);
     font-size: 11px;
     margin: 0;
+    width: 35px; /* Fixed width */
     min-width: 30px;
+    max-width: 40px;
+    height: 16px; /* Fixed height */
     -unity-text-align: middle-right;
 }
 
