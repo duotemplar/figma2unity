@@ -62,25 +62,15 @@
     <Analyzer Include="/Users/duoshen/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.1.3/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/DummyUI/Scripts/CustomButton.cs" />
-    <Compile Include="Assets/DummyUI/Scripts/CustomButtonElement.cs" />
-    <Compile Include="Assets/DummyUI/Scripts/InspectorPanel.cs" />
-    <Compile Include="Assets/DummyUI/Scripts/InspectorPanelExample.cs" />
-    <Compile Include="Assets/DummyUI/Scripts/Avatar.cs" />
-    <Compile Include="Assets/DummyUI/Scripts/AvatarElement.cs" />
-    <Compile Include="Assets/DummyUI/Scripts/AvatarDemo.cs" />
-    <Compile Include="Assets/DummyUI/Scripts/AvatarRequestUtility.cs" />
+    <Compile Include="Assets/UIComponents/Scripts/ShadcnAvatarDemo.cs" />
+    <Compile Include="Assets/UIComponents/Components/Avatar/Avatar.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets/DummyUI/UI/Avatar.uss" />
-    <None Include="Assets/DummyUI/UI/CustomButton.uxml" />
+    <None Include="Assets/UIComponents/UI/Avatar.uss" />
     <None Include="Assets/Resources/UI/Avatar.uss" />
-    <None Include="Assets/DummyUI/UI/CustomButton.uss" />
-    <None Include="Assets/DummyUI/UI/InspectorPanel.uss" />
     <None Include="Assets/Resources/UI/InspectorPanel.uxml" />
     <None Include="Assets/Resources/UI/CustomButton.uxml" />
-    <None Include="Assets/DummyUI/UI/InspectorPanel.uxml" />
-    <None Include="Assets/DummyUI/UI/Avatar.uxml" />
+    <None Include="Assets/UIComponents/UI/Avatar.uxml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

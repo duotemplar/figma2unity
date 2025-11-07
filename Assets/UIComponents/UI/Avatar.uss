@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    --avatar-ring-color : rgb(59, 130, 246);
 }
 
 .avatar-container {

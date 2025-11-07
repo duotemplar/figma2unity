@@ -1,0 +1,56 @@
+{
+  "tasks": [
+    {
+      "id": "6a0cabe9-eb60-46e0-9ec7-f17fd2d8abe3",
+      "name": "扩展 Avatar 组件支持 Inspector 纹理",
+      "description": "在 Assets/DummyUI/Scripts/Avatar.cs / AvatarElement.cs 中增加直接设置 Texture2D 的入口，确保当 inspector 中指定 Texture2D 时无需走网络下载；同步刷新 fallback 文本、形态状态。",
+      "notes": "复用 AvatarRequestUtility，不要移除已有日志。",
+      "status": "pending",
+      "dependencies": [],
+      "createdAt": "2025-11-06T07:49:02.716Z",
+      "updatedAt": "2025-11-06T07:49:02.716Z",
+      "relatedFiles": [
+        {
+          "path": "Assets/DummyUI/Scripts/Avatar.cs",
+          "type": "TO_MODIFY",
+          "description": "添加 Texture2D 序列化字段与同步逻辑"
+        },
+        {
+          "path": "Assets/DummyUI/Scripts/AvatarElement.cs",
+          "type": "TO_MODIFY",
+          "description": "如需扩展 SetImage/清理逻辑"
+        }
+      ],
+      "implementationGuide": "1. 在 Avatar.cs 添加 [SerializeField] Texture2D imageTexture 字段及 OnValidate/Start 时的同步逻辑；2. 如果 AvatarElement 需要清理旧纹理，补充方法；3. 处理纹理为空时退回 fallback 文本；4. 保持现有网络下载逻辑作为备用。",
+      "verificationCriteria": "在 Inspector 指定 Texture2D 后进入 Play Mode，AvatarElement 显示该纹理，日志无错误；未指定纹理时保持原 fallback/网络逻辑。"
+    },
+    {
+      "id": "4deb5353-99ea-4499-86b3-3410372b32f0",
+      "name": "实现 Shadcn Avatar Demo 脚本",
+      "description": "创建新的 Demo MonoBehaviour，参考 React 示例构建三个 Avatar（圆形、方形、堆叠）。所有纹理与 fallback 文本需在 Inspector 中可配置。",
+      "notes": "可选地在 Components/Avatar/ 生成 UXML/USS 资源，用于复用；保持所有 style class 与 Avatar.uss 定义一致。",
+      "status": "pending",
+      "dependencies": [
+        {
+          "taskId": "6a0cabe9-eb60-46e0-9ec7-f17fd2d8abe3"
+        }
+      ],
+      "createdAt": "2025-11-06T07:49:02.716Z",
+      "updatedAt": "2025-11-06T07:49:02.716Z",
+      "relatedFiles": [
+        {
+          "path": "Assets/DummyUI/Scripts",
+          "type": "TO_MODIFY",
+          "description": "添加 Demo 脚本"
+        },
+        {
+          "path": "Assets/DummyUI/UI/Avatar.uss",
+          "type": "TO_MODIFY",
+          "description": "若需补充分组或 ring 样式"
+        }
+      ],
+      "implementationGuide": "1. 新建 Scripts/ShadcnAvatarDemo.cs（或类似命名）放置在 Assets/DummyUI/Scripts；2. 在 Start 中加载 Avatar 样式表，动态实例化 AvatarElement，应用类名/状态（ring、grayscale、rounded）；3. 通过序列化的 Texture2D 字段给 AvatarElement.SetImage；4. 组建一个带负间距的分组容器重现堆叠效果。",
+      "verificationCriteria": "加载 Demo 脚本所在场景，Inspector 中设置三张 Texture2D，运行后显示与 React 示例一致（含方形变体、堆叠灰度+描边）。"
+    }
+  ]
+}
