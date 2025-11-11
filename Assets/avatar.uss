@@ -1,0 +1,15 @@
+.avatar-rounded {
+    border-top-left-radius: 88px;
+    border-top-right-radius: 88px;
+    border-bottom-right-radius: 88px;
+    border-bottom-left-radius: 88px;
+    background-image: resource('DummyRes/128');
+    border-left-color: rgba(255, 0, 0, 255);
+    border-right-color: rgba(255, 0, 0, 255);
+    border-top-color: rgba(255, 0, 0, 255);
+    border-bottom-color: rgba(255, 0, 0, 255);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+}

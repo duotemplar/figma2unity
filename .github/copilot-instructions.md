@@ -25,6 +25,7 @@
 - 获取的figma页面数据，或是用户贴给你的tsx的参考代码中，如果存在类，属性，等定义时，可以从radix-ui和shadcn-ui这两个sub module的源码中进行查找，明确这些类，属性，函数的定义和用途。然后正确的使用对应的ui toolkit的功能进行实现
 - 如果对于一个组件，在shadcn-ui中，查找到了其相关的样式，那么ui toolkit的组件，要生成同样功能的样式。样式的属性只能比shadcn-ui识别出的属性要多，但不能缺失
 - 对于识别出的属性，你需要判断该属性适合复用还是适合单独调整，对于适合复用的，并且unity的ui toolkit不具备类似功能的内建属性时，需要用CustomStyleProperty进行自定义。如果该属性适合针对单个实例进行单独调整的，则需要用UxmlAttributeDescription和UxmlTraits暴露
+- 用UxmlTraits暴露的属性，必须做到在inspector面板中调整时，能实时反应到ui builder的预览效果中，并可以保存。在之后的运行时起作用
 - 从figma获取的页面数据，并用ui toolkit实现时，优先尝试调用“Assets/DummyUI/Components”目录下现有的组件来进行实现
 - 每次实现前，需要先告知用户你识别出了哪些radix-ui，shadcn-ui中存在的组件类，并使用了他们的那些功能，并告知用户你用ui toolkit的实现计划。
 

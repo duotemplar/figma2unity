@@ -66,11 +66,9 @@
     <Compile Include="Assets/UIComponents/Components/Avatar/Avatar.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets/UIComponents/UI/Avatar.uss" />
     <None Include="Assets/Resources/UI/Avatar.uss" />
-    <None Include="Assets/Resources/UI/InspectorPanel.uxml" />
-    <None Include="Assets/Resources/UI/CustomButton.uxml" />
-    <None Include="Assets/UIComponents/UI/Avatar.uxml" />
+    <None Include="Assets/avatar.uss" />
+    <None Include="Assets/Resources/UI/Avatar.uxml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

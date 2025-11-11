@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/avatar.uss?fileID=7433441132597879392&amp;guid=5d72492ba05fe46c8ab4508e055f5bae&amp;type=3#avatar" />
+    <DummyUI.AvatarElement class="avatar-rounded" />
+    <DummyUI.AvatarElement class="avatar-rounded" />
+    <ui:VisualElement class="avatar-rounded" />
+</ui:UXML>

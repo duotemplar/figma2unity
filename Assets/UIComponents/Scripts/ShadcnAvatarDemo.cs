@@ -101,7 +101,6 @@ namespace DummyUI
     private AvatarElement CreateAvatar(Texture2D texture, string fallback, AvatarElement.Shape shape, string colorClass)
         {
             var element = new AvatarElement();
-            element.SetFallbackText(fallback);
             element.SetShape(shape);
             element.SetSize(AvatarElement.Size.Medium);
             element.AddToClassList(colorClass);
@@ -140,7 +139,6 @@ namespace DummyUI
         private AvatarElement CreateStackedAvatar(Texture2D texture, string fallback, string colorClass, float marginLeft)
         {
             var element = new AvatarElement();
-            element.SetFallbackText(fallback);
             element.SetShape(AvatarElement.Shape.Circle);
             element.SetSize(AvatarElement.Size.Medium);
             element.SetGrayscale(true);
